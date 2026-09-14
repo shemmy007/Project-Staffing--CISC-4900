@@ -1,0 +1,185 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="31mxebDbMbz09URi3UvX">
+    <mxGraphModel dx="1784" dy="619" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;rotation=90;" value="" vertex="1">
+          <mxGeometry height="190" width="350" x="-60" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-17" edge="1" parent="1" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;endArrow=none;endFill=0;" value="">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <Array as="points">
+              <mxPoint x="210" y="70" />
+            </Array>
+            <mxPoint x="20" y="70" as="sourcePoint" />
+            <mxPoint x="100" y="70" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-18" edge="1" parent="1" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;endArrow=none;endFill=0;" value="">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <Array as="points">
+              <mxPoint x="210" y="120" />
+            </Array>
+            <mxPoint x="20" y="120" as="sourcePoint" />
+            <mxPoint x="100" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-19" edge="1" parent="1" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;endArrow=none;endFill=0;" value="">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <Array as="points">
+              <mxPoint x="210" y="170" />
+            </Array>
+            <mxPoint x="20" y="170" as="sourcePoint" />
+            <mxPoint x="100" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-20" edge="1" parent="1" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;endArrow=none;endFill=0;" value="">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <Array as="points">
+              <mxPoint x="210" y="220" />
+            </Array>
+            <mxPoint x="20" y="220" as="sourcePoint" />
+            <mxPoint x="100" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-21" edge="1" parent="1" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;endArrow=none;endFill=0;" value="">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <Array as="points">
+              <mxPoint x="210" y="269.5" />
+            </Array>
+            <mxPoint x="20" y="269.5" as="sourcePoint" />
+            <mxPoint x="100" y="269.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-22" edge="1" parent="1" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;endArrow=none;endFill=0;" value="">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <Array as="points">
+              <mxPoint x="210" y="320" />
+            </Array>
+            <mxPoint x="20" y="320" as="sourcePoint" />
+            <mxPoint x="100" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-24" parent="1" style="whiteSpace=wrap;html=1;" value="&lt;b&gt;Valines- Work areas&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="120" x="55" as="geometry" />
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-32" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;strokeWidth=3;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="70" y="270" as="sourcePoint" />
+            <mxPoint x="70" y="20" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-33" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="1" vertex="1">
+          <mxGeometry height="30" width="60" x="10" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-34" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="2" vertex="1">
+          <mxGeometry height="30" width="60" x="10" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-35" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="3" vertex="1">
+          <mxGeometry height="30" width="60" x="10" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-36" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="4" vertex="1">
+          <mxGeometry height="30" width="60" x="10" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-37" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="5" vertex="1">
+          <mxGeometry height="30" width="60" x="10" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-38" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;h3&gt;SMALLS&lt;/h3&gt;" vertex="1">
+          <mxGeometry height="30" width="180" x="-10" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-44" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;strokeWidth=3;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points" />
+            <mxPoint x="70" y="370" as="sourcePoint" />
+            <mxPoint x="70" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-45" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="S" vertex="1">
+          <mxGeometry height="30" width="60" x="10" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-46" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;current Volume (From an existing application)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="35" width="140" x="70" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-48" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;current Volume (From an existing application)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="35" width="140" x="70" y="77.5" as="geometry" />
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-51" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;current Volume (From an existing application)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="35" width="140" x="70" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-52" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;current Volume (From an existing application)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="35" width="140" x="70" y="177.5" as="geometry" />
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-53" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;current Volume (From an existing application)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="35" width="140" x="71" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-54" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;current Volume (From an existing application)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="35" width="140" x="70" y="327.5" as="geometry" />
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-57" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=4;" value="" vertex="1">
+          <mxGeometry height="350" width="610" x="210" y="15" as="geometry" />
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-59" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Target Packager Per Hour (PPH)" vertex="1">
+          <mxGeometry height="35" width="110" x="230" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-60" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="# Of staff actually clocked in" vertex="1">
+          <mxGeometry height="35" width="130" x="690" y="37.5" as="geometry" />
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-61" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Total Volume" vertex="1">
+          <mxGeometry height="35" width="120" x="230" y="137.5" as="geometry" />
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-62" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Required stuff" vertex="1">
+          <mxGeometry height="35" width="120" x="700" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-63" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=0;" value="Will point what area" vertex="1">
+          <mxGeometry height="60" width="160" x="225" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-64" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=0;" value="Will tell you how many staffing needed for this specific area&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="150" x="640" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-65" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="PPH will be from an existing application&amp;nbsp;" vertex="1">
+          <mxGeometry height="30" width="140" x="390" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-67" edge="1" parent="1" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=0.262;exitY=0.557;exitDx=0;exitDy=0;exitPerimeter=0;strokeWidth=2;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="350" y="62" as="sourcePoint" />
+            <mxPoint x="390" y="62" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-69" edge="1" parent="1" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=0.262;exitY=0.557;exitDx=0;exitDy=0;exitPerimeter=0;strokeWidth=2;entryX=0.721;entryY=0.186;entryDx=0;entryDy=0;entryPerimeter=0;" target="o2-knsH-WRpuh9TOBvBX-57" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="690" y="52" as="sourcePoint" />
+            <mxPoint x="630" y="52" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-70" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="# of staff clocked in will be from an existing application&amp;nbsp;" vertex="1">
+          <mxGeometry height="30" width="160" x="540" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-71" edge="1" parent="1" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=0.262;exitY=0.557;exitDx=0;exitDy=0;exitPerimeter=0;strokeWidth=2;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="360" y="154.5" as="sourcePoint" />
+            <mxPoint x="400" y="154.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-72" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Total Volume &amp;nbsp;will be from an existing application&amp;nbsp;" vertex="1">
+          <mxGeometry height="30" width="140" x="400" y="142.5" as="geometry" />
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-73" edge="1" parent="1" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=0.262;exitY=0.557;exitDx=0;exitDy=0;exitPerimeter=0;strokeWidth=2;entryX=0.721;entryY=0.186;entryDx=0;entryDy=0;entryPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="700" y="152" as="sourcePoint" />
+            <mxPoint x="660" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-74" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="System will compute the number of staffing actually needed&amp;nbsp;" vertex="1">
+          <mxGeometry height="30" width="160" x="540" y="182.5" as="geometry" />
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-75" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Message bar: Display the current staffing status: Overstaffed or Understaffed. Will also illuminate red or green." vertex="1">
+          <mxGeometry height="50" width="600" x="210" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="o2-knsH-WRpuh9TOBvBX-76" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=23;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;br&gt;&lt;/h1&gt;&lt;p&gt;&lt;font face=&quot;Comic Sans MS&quot;&gt;&lt;b style=&quot;color: rgb(0, 0, 255);&quot;&gt;Diagram of what the UI should look like.&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="120" width="665" x="170" y="285" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
