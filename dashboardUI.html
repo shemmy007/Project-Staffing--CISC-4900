@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bottom-Up Operations Control</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; background-color: #121212; color: white; margin: 0; display: flex; height: 100vh; overflow: hidden; }
+        .sidebar { width: 320px; background-color: #1a1a1a; border-right: 2px solid #333; display: flex; flex-direction: column; padding: 15px; overflow-y: auto; }
+        .sidebar h2 { font-size: 1.2rem; color: #888; margin-bottom: 10px; margin-top: 20px; text-transform: uppercase; border-bottom: 1px solid #333; padding-bottom: 5px; }
+        
+        /* New Input Styling for Sidebar */
+        .input-group { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; background-color: #2a2a2a; padding: 8px; border-radius: 5px; }
+        .input-group label { font-size: 1rem; color: #ccc; cursor: pointer; flex-grow: 1; }
+        .input-group label:hover { color: white; }
+        .input-group input { width: 70px; padding: 5px; background-color: #121212; border: 1px solid #444; color: #00a8ff; font-weight: bold; border-radius: 4px; text-align: center; }
+        .input-group input:focus { outline: none; border-color: #007bff; }
+        .active-area { border: 2px solid #007bff; background-color: #1e3a5f; }
+
+        .main-content { flex-grow: 1; display: flex; flex-direction: column; padding: 20px; overflow-y: auto; }
+        .header { display: flex; justify-content: space-between; padding: 20px; background-color: #1e1e1e; border-bottom: 3px solid #333; font-size: 1.5rem; font-weight: bold; border-radius: 8px 8px 0 0; }
+        
+        .area-title { font-size: 3rem; font-weight: bold; color: #ffffff; margin: 20px 0 10px 0; text-transform: uppercase; }
+        .metrics-container { display: flex; justify-content: space-between; margin-top: 10px; gap: 20px; }
+        .metric-box { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 10px; background-color: #1e1e1e; border: 2px solid #333; padding: 30px 0; }
+        .metric-title { font-size: 1.5rem; color: #888; margin-bottom: 15px; text-transform: uppercase; }
+        .metric-value { font-size: 8rem; font-weight: bold; }
+        
+        .status-green { background-color: #0b4a1b; border: 4px solid #28a745; color: #28a745; }
+        .status-red { background-color: #4a0b0b; border: 4px solid #dc3545; color: #ff4d4d; animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7); } 70% { box-shadow: 0 0 0 20px rgba(220, 53, 69, 0); } 100% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0); } }
+
+        #alert-banner { text-align: center; font-size: 1.5rem; font-weight: bold; padding: 15px; background-color: #dc3545; color: white; display: none; margin-top: 15px; border-radius: 5px; }
+        
+        .global-controls { display: flex; gap: 20px; margin-bottom: 20px; padding: 15px; background-color: #1e1e1e; border-radius: 8px; border: 1px solid #333; }
+        .global-controls div { flex: 1; display: flex; flex-direction: column; }
+        .global-controls label { color: #888; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 5px; }
+        .global-controls input { background: #121212; border: 1px solid #444; color: white; padding: 10px; font-size: 1.2rem; border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar" id="input-sidebar">
+        <h1 style="color: white; font-size: 1.2rem; text-align: center;">MANUAL VOLUME ENTRY</h1>
+        
+        <h2>Vanlines</h2>
+        <div class="input-group" id="group-Belt1" onclick="selectArea('Belt1')">
+            <label>Belt 1</label>
+            <input type="number" id="vol-Belt1" value="0" oninput="handleManualInput()">
+        </div>
+        <div class="input-group" id="group-Belt2" onclick="selectArea('Belt2')">
+            <label>Belt 2</label>
+            <input type="number" id="vol-Belt2" value="0" oninput="handleManualInput()">
+        </div>
+        <div class="input-group" id="group-Belt3" onclick="selectArea('Belt3')">
+            <label>Belt 3</label>
+            <input type="number" id="vol-Belt3" value="0" oninput="handleManualInput()">
+        </div>
+        <div class="input-group active-area" id="group-Belt4" onclick="selectArea('Belt4')">
+            <label>Belt 4</label>
+            <input type="number" id="vol-Belt4" value="850" oninput="handleManualInput()">
+        </div>
+        <div class="input-group" id="group-Belt5" onclick="selectArea('Belt5')">
+            <label>Belt 5</label>
+            <input type="number" id="vol-Belt5" value="0" oninput="handleManualInput()">
+        </div>
+        
+        <h2>Smalls</h2>
+        <div class="input-group" id="group-SmallsSort" onclick="selectArea('SmallsSort')">
+            <label>Smalls Sort</label>
+            <input type="number" id="vol-SmallsSort" value="0" oninput="handleManualInput()">
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="global-controls">
+            <div>
+                <label>Target PPH Per Handler</label>
+                <input type="number" id="global-pph" value="250" oninput="handleManualInput()">
+            </div>
+            <div>
+                <label>Actual Staff Clocked In</label>
+                <input type="number" id="actual-staff" value="60" oninput="handleManualInput()">
+            </div>
+        </div>
+
+        <div class="header">
+            <div>TOTAL FACILITY VOLUME: <span id="total-fac-vol" style="color:#00a8ff;">0</span></div>
+            <div>REQUIRED FACILITY STAFF: <span id="global-required-staff" style="color:#00a8ff;">0 PH</span></div>
+        </div>
+
+        <div id="alert-banner">⚡ LABOR LEAK: Cut <span id="cut-amount">0</span> people to protect TLH.</div>
+
+        <div class="area-title" id="display-title">BELT 4</div>
+
+        <div class="metrics-container">
+            <div class="metric-box">
+                <div class="metric-title">Input Volume</div>
+                <div class="metric-value" id="area-vol-value">0</div>
+                <div style="font-size: 2rem; color: #888;">PKGS</div>
+            </div>
+
+            <div class="metric-box status-green" id="staffing-box">
+                <div class="metric-title" style="color: inherit;">Required Headcount</div>
+                <div class="metric-value" id="area-staff-value">0</div>
+                <div style="font-size: 2rem; color: inherit;">PH</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ---------------------------------------------------------
+        // 1. THE STATE OBJECT (The single source of truth)
+        // ---------------------------------------------------------
+        let state = {
+            global: {
+                targetPph: 250,
+                actualStaff: 60,
+                totalVolume: 0,
+                totalRequiredStaff: 0
+            },
+            areas: {
+                Belt1: { volume: 0, requiredStaff: 0, name: "Belt 1" },
+                Belt2: { volume: 0, requiredStaff: 0, name: "Belt 2" },
+                Belt3: { volume: 0, requiredStaff: 0, name: "Belt 3" },
+                Belt4: { volume: 850, requiredStaff: 0, name: "Belt 4" },
+                Belt5: { volume: 0, requiredStaff: 0, name: "Belt 5" },
+                SmallsSort: { volume: 0, requiredStaff: 0, name: "Smalls Sort" }
+            },
+            ui: {
+                selectedArea: "Belt4"
+            }
+        };
+
+        // ---------------------------------------------------------
+        // 2. THE MATH ENGINE (Only calculates data based on state)
+        // ---------------------------------------------------------
+        function runCalculations() {
+            let tempTotalVol = 0;
+            let tempTotalStaff = 0;
+            
+            // Prevent divide-by-zero errors
+            const pph = state.global.targetPph > 0 ? state.global.targetPph : 1; 
+
+            // Loop through the state object to calculate required staff per area
+            for (const areaKey in state.areas) {
+                const vol = state.areas[areaKey].volume;
+                const required = Math.ceil(vol / pph);
+                
+                state.areas[areaKey].requiredStaff = required;
+                
+                tempTotalVol += vol;
+                tempTotalStaff += required;
+            }
+
+            // Update global state totals
+            state.global.totalVolume = tempTotalVol;
+            state.global.totalRequiredStaff = tempTotalStaff;
+        }
+
+        // ---------------------------------------------------------
+        // 3. THE UI RENDERER (Only updates the screen based on state)
+        // ---------------------------------------------------------
+        function renderDashboard() {
+            // Render Global Metrics
+            document.getElementById('total-fac-vol').innerText = state.global.totalVolume.toLocaleString();
+            document.getElementById('global-required-staff').innerText = state.global.totalRequiredStaff + " PH";
+
+            // Render Selected Area Metrics
+            const activeArea = state.ui.selectedArea;
+            document.getElementById('display-title').innerText = state.areas[activeArea].name.toUpperCase();
+            document.getElementById('area-vol-value').innerText = state.areas[activeArea].volume;
+            document.getElementById('area-staff-value').innerText = state.areas[activeArea].requiredStaff;
+
+            // Evaluate Labor Leak Alert
+            const alertBanner = document.getElementById('alert-banner');
+            const staffingBox = document.getElementById('staffing-box');
+            
+            if (state.global.totalRequiredStaff < state.global.actualStaff) {
+                alertBanner.style.display = 'block';
+                document.getElementById('cut-amount').innerText = (state.global.actualStaff - state.global.totalRequiredStaff);
+                staffingBox.classList.remove('status-green');
+                staffingBox.classList.add('status-red');
+            } else {
+                alertBanner.style.display = 'none';
+                staffingBox.classList.remove('status-red');
+                staffingBox.classList.add('status-green');
+            }
+        }
+
+        // ---------------------------------------------------------
+        // 4. MANUAL INPUT LISTENER (Connects inputs to state)
+        // ---------------------------------------------------------
+        function handleManualInput() {
+            // Read global inputs from the DOM into the state
+            state.global.targetPph = parseInt(document.getElementById('global-pph').value) || 0;
+            state.global.actualStaff = parseInt(document.getElementById('actual-staff').value) || 0;
+
+            // Read area volumes from the DOM into the state
+            for (const areaKey in state.areas) {
+                state.areas[areaKey].volume = parseInt(document.getElementById('vol-' + areaKey).value) || 0;
+            }
+
+            // Calculate and re-render
+            runCalculations();
+            renderDashboard();
+        }
+
+        // Handles sidebar clicks to change the main display area
+        function selectArea(areaId) {
+            state.ui.selectedArea = areaId;
+            
+            // Update sidebar active styling
+            const groups = document.querySelectorAll('.input-group');
+            groups.forEach(g => g.classList.remove('active-area'));
+            document.getElementById('group-' + areaId).classList.add('active-area');
+            
+            // Re-render to show the newly selected area
+            renderDashboard();
+        }
+
+        // ---------------------------------------------------------
+        // 5. INITIALIZATION (Runs once when the page loads)
+        // ---------------------------------------------------------
+        runCalculations();
+        renderDashboard();
+    </script>
+</body>
+</html>
