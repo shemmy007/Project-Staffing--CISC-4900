@@ -1,0 +1,8 @@
+## Testing Strategy
+
+To verify both the predictive staffing calculations and the real-time operational flow of the Labor Optimization & Pacing Dashboard, testing is organized across four levels:
+
+- **Unit Testing:** Validates headcount and pacing math (such as remaining volume over target throughput), edge cases (zero volume, zero target rate, negative/missing values, division-by-zero guards), and the 3-second scheduled DRO volume decrement behavior.
+- **Integration Testing:** Verifies `DashboardController` endpoints, HTTP status codes and JSON payloads, H2 in-memory state updates, and frontend `fetch()` requests to `http://localhost:8080` (including error handling and live UI updates).
+- **System Testing:** Tests full end-to-end startup via IntelliJ/Maven on Java 21 with embedded Tomcat on port 8080, sustained execution of the 3-second DRO timer, and visual alert state transitions across browsers.
+- **User Acceptance Testing (UAT):** Walks through realistic sort and staffing scenarios to verify that alerts and pacing cues stay clear and actionable without clutter.
